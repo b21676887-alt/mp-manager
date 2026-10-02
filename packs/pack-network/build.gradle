@@ -29,7 +29,7 @@ dependencies {
     compileOnly project(':sdk')
     compileOnly 'com.google.android.material:material:1.12.0'
     compileOnly 'androidx.appcompat:appcompat:1.7.0'
-    compileOnly 'androidx.core:core:1.13.0'
+    compileOnly 'androidx.core:core:1.19.1'
     compileOnly 'com.google.zxing:core:3.5.3'
     compileOnly 'com.journeyapps:zxing-android-embedded:4.3.0'
 }
