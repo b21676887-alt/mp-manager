@@ -23,7 +23,7 @@ jobs:
     outputs:
       short_sha: ${{ steps.set_sha.outputs.short_sha }}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: Set up JDK 17
         uses: actions/setup-java@v5
@@ -75,7 +75,7 @@ jobs:
     runs-on: ${{ vars.IS_USING_HOSTED_RUNNERS == 'true' && 'self-hosted' || 'ubuntu-latest' }}
     needs: build
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: Download Artifacts
         uses: actions/download-artifact@v8
@@ -227,7 +227,7 @@ jobs:
     needs: publishRelease
     if: github.ref == 'refs/heads/main'
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           token: ${{ secrets.GH_ABOUT_APP_WORKFLOW_TOKEN || secrets.GITHUB_TOKEN }}
           fetch-depth: 0
